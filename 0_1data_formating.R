@@ -1,6 +1,6 @@
 setwd(FMT_DIR); cat("当前工作目录：", getwd())
-exposure_file <- ""  # GWAS数据，用作暴露因素
-outcome_file <- ""   # GWAS数据，用作结局
+exposure_file <- "D:/MR_Data/GWAS_Data/exposure_ieu-a-2.vcf"  # GWAS数据，用作暴露因素
+outcome_file <- "D:/MR_Data/GWAS_Data/outcome_ieu-a-7.vcf"   # GWAS数据，用作结局
 
 
 # format_gwas_data()开始--------------------
@@ -53,13 +53,13 @@ format_gwas_data <- function(file, f_fmt,
 # format_gwas_data()结束--------------------
 
 # ---格式化暴露数据
-format_gwas_data(file = exposure_file, f_fmt = "...",
+format_gwas_data(file = exposure_file, f_fmt = "vcf",
                  gws_refer_id = EXPOSURE_REFER_ID, exposure_or_outcome_name = EXPOSURE_NAME, exposure_or_outcome_data_id = EXPOSURE_DATA_ID,
                  # chromo = "...", position = "...", eff_allele = "...", non_eff_allele = "...", beta_val = "...", p_val = "..."
 )
 
 # ---格式化结局数据
-format_gwas_data(file = outcome_file, f_fmt = "...",
+format_gwas_data(file = outcome_file, f_fmt = "vcf",
                  gws_refer_id = OUTCOME_REFER_ID, exposure_or_outcome_name = OUTCOME_NAME, exposure_or_outcome_data_id = OUTCOME_DATA_ID,
                  # chromo = "...", position = "...", eff_allele = "...", non_eff_allele = "...", beta_val = "...", p_val = "...",
 )

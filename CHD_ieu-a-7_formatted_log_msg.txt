@@ -1,0 +1,111 @@
+Loading required namespace: GenomicFiles
+Using local VCF.
+bgzip-compressing VCF file.
+Finding empty VCF columns based on first 10,000 rows.
+Dropping 1 duplicate column(s).
+1 sample detected: ieu-a-7
+Constructing ScanVcfParam object.
+VCF contains: 8,479,693 variant(s) x 1 sample(s)
+Reading VCF file: multi-threaded (16 threads)
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Dropping 1 duplicate column(s).
+
+Renaming ID as SNP.
+VCF file has -log10 P-values; these will be converted to unadjusted p-values in the 'P' column.
+No INFO (SI) column detected.
+Infer Effect Column
+First line of summary statistics file: 
+SNP	chr	BP	end	REF	ALT	FILTER	AF	ES	SE	LP	SS	P	
+Standardising column headers.
+First line of summary statistics file: 
+SNP	chr	BP	end	REF	ALT	FILTER	AF	ES	SE	LP	SS	P	
+Summary statistics report:
+   - 8,479,692 rows
+   - 8,479,692 unique variants
+   - 2,022 genome-wide significant variants (P<5e-8)
+   - 22 chromosomes
+Checking for multiple RSIDs on one row.
+Checking SNP RSIDs.
+Checking for merged allele column.
+Checking A1 is uppercase
+Checking A2 is uppercase
+Checking for incorrect base-pair positions
+Ensuring all SNPs are on the reference genome.
+Loading SNPlocs data.
+Loading reference genome data.
+Preprocessing RSIDs.
+Validating RSIDs of 8,479,692 SNPs using BSgenome::snpsById...
+BSgenome::snpsById done in 415 seconds.
+1,298 SNPs are not on the reference genome. These will be corrected from the reference genome.
+Loading SNPlocs data.
+Loading SNPlocs data.
+Loading reference genome data.
+Preprocessing RSIDs.
+Validating RSIDs of 8,478,850 SNPs using BSgenome::snpsById...
+BSgenome::snpsById done in 2203 seconds.
+Reordering so first three column headers are SNP, CHR and BP in this order.
+Reordering so the fourth and fifth columns are A1 and A2.
+Checking for missing data.
+Checking for duplicate columns.
+Ensuring that the N column is all integers.
+The sumstats N column is not all integers, this could effect downstream analysis. These will be converted to integers.
+Checking for duplicated rows.
+INFO column not available. Skipping INFO score filtering step.
+Filtering SNPs, ensuring SE>0.
+Ensuring all SNPs have N<5 std dev above mean.
+1,514,305 SNPs (17.9%) have FRQ values > 0.5. Conventionally the FRQ column is intended to show the minor/effect allele frequency.
+The FRQ column was mapped from one of the following from the inputted  summary statistics file:
+FRQ, EAF, FREQUENCY, FRQ_U, F_U, MAF, FREQ, FREQ_TESTED_ALLELE, FRQ_TESTED_ALLELE, FREQ_EFFECT_ALLELE, FRQ_EFFECT_ALLELE, EFFECT_ALLELE_FREQUENCY, EFFECT_ALLELE_FREQ, EFFECT_ALLELE_FRQ, A2FREQ, A2FRQ, ALLELE_FREQUENCY, ALLELE_FREQ, ALLELE_FRQ, AF, MINOR_AF, EFFECT_AF, A2_AF, EFF_AF, ALT_AF, ALTERNATIVE_AF, INC_AF, A_2_AF, TESTED_AF, ALLELEFREQ, ALT_FREQ, EAF_HRC, EFFECTALLELEFREQ, FREQ.B, FREQ_EUROPEAN_1000GENOMES, FREQ_HAPMAP, FREQ_TESTED_ALLELE_IN_HRS, FRQ_U_113154, FRQ_U_31358, FRQ_U_344901, FRQ_U_43456, POOLED_ALT_AF, AF_ALT, AF.ALT, AF-ALT, ALT.AF, ALT-AF, A2.AF, A2-AF, AF.EFF, AF_EFF, ALL_AF
+As frq_is_maf=TRUE, the FRQ column will not be renamed. If the FRQ values were intended to represent major allele frequency,
+set frq_is_maf=FALSE to rename the column as MAJOR_ALLELE_FRQ and differentiate it from minor/effect allele frequency.
+Sorting coordinates with "data.table".
+Writing in tabular format ==> D:/MR_Data/MendelRookie_output/#_FORMATED_DATA/CHD_ieu-a-7_formatted.csv.gz
+Summary statistics report:
+   - 8,478,850 rows (100% of original 8,479,692 rows)
+   - 8,478,850 unique variants
+   - 2,022 genome-wide significant variants (P<5e-8)
+   - 22 chromosomes
+Done munging in 139.927 minutes.
+Successfully finished preparing sumstats file, preview:
+Reading header.
+         SNP   CHR     BP     A1     A2    END FILTER      FRQ      BETA        SE         LP
+      <char> <int>  <int> <char> <char>  <int> <char>    <num>     <num>     <num>      <num>
+1: rs3094315     1 752566      G      A 752566   PASS 0.763018 -0.005243 0.0157652 0.13108500
+2: rs3131972     1 752721      A      G 752721   PASS 0.740969 -0.003032 0.0156381 0.07249350
+3: rs3131971     1 752894      T      C 752894   PASS 0.744287  0.004640 0.0162377 0.11066100
+4: rs2073814     1 753474      C      G 753474   PASS 0.716742  0.000407 0.0157456 0.00904957
+        N         P
+    <int>     <num>
+1: 184305 0.7394605
+2: 184305 0.8462652
+3: 184305 0.7750666
+4: 184305 0.9793782
