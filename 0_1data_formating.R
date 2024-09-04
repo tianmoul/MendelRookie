@@ -1,11 +1,7 @@
 setwd(FMT_DIR); cat("当前工作目录：", getwd())
-<<<<<<< Updated upstream
-exposure_file <- ""  # GWAS数据，用作暴露因素
-outcome_file <- ""   # GWAS数据，用作结局
-=======
+
 exposure_file <- "D:/MR_Data/GWAS_Data/GCST90014006/harmonised/harmonised.qc.tsv"  # GWAS数据，用作暴露因素
 outcome_file <- "D:/MR_Data/GWAS_Data/GCST90275127/harmonised/GCST90275127.h.tsv"   # GWAS数据，用作结局
->>>>>>> Stashed changes
 
 
 # format_gwas_data()开始--------------------
@@ -58,22 +54,15 @@ format_gwas_data <- function(file, f_fmt,
 # format_gwas_data()结束--------------------
 
 # ---格式化暴露数据
-<<<<<<< Updated upstream
-format_gwas_data(file = exposure_file, f_fmt = "...",
-=======
+
 format_gwas_data(file = exposure_file, f_fmt = "tsv",
->>>>>>> Stashed changes
                  gws_refer_id = EXPOSURE_REFER_ID, exposure_or_outcome_name = EXPOSURE_NAME, exposure_or_outcome_data_id = EXPOSURE_DATA_ID,
                  chromo = "chromosome", position = "hm_pos", eff_allele = "hm_effect_allele", non_eff_allele = "hm_other_allele", beta_val = "hm_beta", p_val = "p_value",
                  columns_to_remove = c("beta")
 )
 
 # ---格式化结局数据
-<<<<<<< Updated upstream
-format_gwas_data(file = outcome_file, f_fmt = "...",
-=======
 format_gwas_data(file = outcome_file, f_fmt = "tsv",
->>>>>>> Stashed changes
                  gws_refer_id = OUTCOME_REFER_ID, exposure_or_outcome_name = OUTCOME_NAME, exposure_or_outcome_data_id = OUTCOME_DATA_ID,
                  chromo = "chromosome", position = "base_pair_location", eff_allele = "effect_allele", non_eff_allele = "other_allele", beta_val = "beta", p_val = "p_value"
 )
