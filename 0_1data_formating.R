@@ -1,7 +1,7 @@
 setwd(FMT_DIR); cat("当前工作目录：", getwd())
 
-exposure_file <- "D:/MR_Data/GWAS_Data/GCST90014006/harmonised/harmonised.qc.tsv"  # GWAS数据，用作暴露因素
-outcome_file <- "D:/MR_Data/GWAS_Data/GCST90275127/harmonised/GCST90275127.h.tsv"   # GWAS数据，用作结局
+exposure_file <- "D:/MR_Data/GWAS_Data/parkinson/ParkinsonsDisease_ieu-b-7.vcf"  # GWAS数据，用作暴露因素
+outcome_file <- "D:/MR_Data/GWAS_Data/parkinson/ParkinsonsDisease_ieu-b-7.vcf"   # GWAS数据，用作结局
 
 
 # format_gwas_data()开始--------------------

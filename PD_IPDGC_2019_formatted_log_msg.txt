@@ -1,0 +1,21 @@
+Infer Effect Column
+First line of summary statistics file: 
+CHR	BP	A1	A2	effect_allele_frequency	BETA	standard_error	P	
+Allele columns are ambiguous, attempting to infer direction
+Found direction from effect/frq column naming
+Effect/frq column(s) relate to A2 in the inputted sumstats
+Standardising column headers.
+First line of summary statistics file: 
+CHR	BP	A1	A2	effect_allele_frequency	BETA	standard_error	P	
+Summary statistics report:
+   - 5,515,075 rows
+   - 9,768 genome-wide significant variants (P<5e-8)
+   - 23 chromosomes
+Checking for multiple RSIDs on one row.
+Checking for merged allele column.
+Checking A1 is uppercase
+Checking A2 is uppercase
+Checking for incorrect base-pair positions
+89328 SNPs have been removed as their BP column is not in the range of 1 to the length of the chromosome
+Loading SNPlocs data.
+There is no SNP column found within the data. It must be inferred from other column information.

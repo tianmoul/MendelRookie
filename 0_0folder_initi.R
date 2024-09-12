@@ -1,20 +1,19 @@
 # ---GWAS 数据暴露因素和结局简称、标识符、参考基因组标识符、人群类别
-
 EXPOSURE_NAME <- 'HbA1c'     # 数据名称。建议使用英文简称，如 WBC、BMI 等
 EXPOSURE_DATA_ID <- 'UKB_HbA1c'  # 数据标识符。建议使用英文简称，如 UK_Biobank_BMI 等
 EXPOSURE_REFER_ID <- 'GRCh38' # GWAS 数据所用的参考序列版本，如 GRCh37 等
 EXPOSURE_POP <- 'EUR'      # 人口学种群标识，如 AFR（非洲）、AMR（美洲）、EAS（东亚）、EUR（欧洲）、SAS（南亚）
 
 OUTCOME_NAME <- 'PD'
-OUTCOME_DATA_ID <- '2024_Multi'
+OUTCOME_DATA_ID <- 'IPDGC_2019'
 OUTCOME_REFER_ID <- 'GRCh38'
 OUTCOME_POP <- 'EUR'
 
 # 千人基因组计划中用于 LD 参考的数据集位置
-LD_REF <- ''  # 下载 http://fileserve.mrcieu.ac.uk/ld/1kg.v3.tgz 文件，解压归档。保证该目录下有可用的 .bed、.bim 和 .fam 文件
+LD_REF <- 'D:/MR_Data/LD_Ref/1kg.v3'  # 下载 http://fileserve.mrcieu.ac.uk/ld/1kg.v3.tgz 文件，解压归档。保证该目录下有可用的 .bed、.bim 和 .fam 文件
 
 # ---分析结果的根目录。必须预先手动创建
-root_dir <- ''
+root_dir <- 'D:/MR_Data/MendelRookie_output'
 
 # 子文件夹名
 topic <- paste0(EXPOSURE_NAME, '(', EXPOSURE_DATA_ID, ')', '→', OUTCOME_NAME, '(', OUTCOME_DATA_ID, ')')
